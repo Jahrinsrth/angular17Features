@@ -1,8 +1,13 @@
 <p>product-list works!</p>
 
 @for(product of products; track product.id; let index = $index; let count = $count){
-<!-- <a [routerLink]="[product.id]">{{product.name}}</a> <br> relative path -->
-{{index}} {{count}}
-<a [routerLink]="['/product',product.id]">{{product.name}}</a> <br> <!-- absolute path -->
-<a [routerLink]="['/product',product.id,'edit']">{{product.name}} edit</a> <br> 
+
+<!-- {{index}} {{count}} -->
+<!-- <a [routerLink]="['/product',product.id]">{{product.name}}</a> <br>  -->
+
+<a [routerLink]="['/product',product.id]">{{product.name}}</a> <br> 
+<a [routerLink]="['/product',product.id,'edit']">{{product.name}} edit</a> <br> <br> 
 }
+
+<!-- <a [routerLink]="['/product',product.id]">{{product.name}}</a> <br> absolute path -->
+<!-- <a [routerLink]="[product.id]">{{product.name}}</a> <br> relative path -->

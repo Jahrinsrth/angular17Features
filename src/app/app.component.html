@@ -1,12 +1,55 @@
 <h1>hello</h1>
 <p>{{quantity()}} </p>
 
+<!--signals-->
 <button (click)="onBtnClick()"> Click </button>
+<input type="text" [(ngModel)]="EmployeeName" /> <br>   
 
 
-<input type="text" [(ngModel)]="EmployeeName" />
+<!-- Deferrable Views -->
+
+<!-- @defer(on idle){
+    <h2 style="color: brown;"> on idle trigger</h2>
+} -->
+
+<!-- @defer(on hover){
+    <h2 style="color: green;"> on hover trigger</h2>
+}
+@placeholder{
+    <h2> on hover trigger</h2>
+} -->
+
+<!-- @defer(on viewport){
+    <h2>on viewport trigger</h2>
+}@placeholder{
+    <h2>on viewport loading </h2>
+} -->
+
+<!-- @defer(on interaction){
+<h2>on interaction trigger </h2>
+}@placeholder{
+    <h2> on interaction trigger loading </h2>
+} -->
+
+
+<!-- @defer(on timer(2000ms)){
+    <h2 style="color: red;"> on timer trigger</h2>
+} -->
+
+
+<!--  binding template refernce variable for deferrable views -->
+<!-- <button type="button" #greet> Deferrable view button </button>
+
+@defer(on interaction(greet)){
+  <h1> button clicked</h1>
+}@placeholder{
+    <h2>loading .....</h2>
+} -->
+
+
 
 <p> {{EmployeeName}}</p>
+
 <router-outlet />
 
 <a [routerLink]="['/home']" routerLinkActive="active"> Home</a>
