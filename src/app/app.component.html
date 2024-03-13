@@ -1,7 +1,7 @@
-<h1>hello</h1>
-<p>{{quantity()}} </p>
+<!-- <h1>hello</h1>
+<p>{{quantity()}} </p> -->
 
-<!--signals-->
+<!--signals-- ####################################### --> 
 <button (click)="onBtnClick()"> Click </button>
 <input type="text" [(ngModel)]="EmployeeName" /> <br>   
 
@@ -50,9 +50,11 @@
 
 <p> {{EmployeeName}}</p>
 
-<router-outlet />
-
 <a [routerLink]="['/home']" routerLinkActive="active"> Home</a>
 <a [routerLink]="['/contact', {fname:'jahrin', lname:'sarooth'}]">Contact</a>  <!-- optional parameter -->
 <a [routerLink]="['/about']" [queryParams]="{lan:'en', showImg:true}" >About </a> <!-- query parameter -->
 <a [routerLink]="['/product']">Product</a>
+
+<router-outlet />
+
+
